@@ -15,7 +15,7 @@ A simple **Python GUI application** that detects, saves, and recognizes faces us
 Make sure you have **Python 3.7+** installed. Then, install the required packages using:
 
 ```sh
-pip install opencv-python numpy pillow sqlite3
+pip install opencv-contrib-python numpy pillow sqlite3
 ```
 
 ## 📂 Installation & Usage
