@@ -29,5 +29,5 @@ cd py-face-recognition
 **2️⃣ Run the Program**
 
 ```sh
-pip python face_recognition_gui.py
+python face_detection.py
 ```
