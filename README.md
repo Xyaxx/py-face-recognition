@@ -1,14 +1,33 @@
-# Face Detection with OpenCV
+# 🖼 Face Recognition with OpenCV & SQLite
 
-A simple Python program that detects faces using **OpenCV's Haar cascades** in a GUI.
+A simple **Python GUI application** that detects, saves, and recognizes faces using **OpenCV** and **SQLite**.
 
 ## 🚀 Features
-- Face detection using OpenCV’s **pre-trained Haar cascades**
-- Works with live webcam feed
-- Simple GUI with start & stop buttons
+✅ **Real-time Face Detection** using OpenCV's **Haar cascades**  
+✅ **Save Faces** to a local **SQLite database** with a custom name  
+✅ **Display Saved Faces** in the GUI  
+✅ **Recognize Faces** from the webcam feed  
+✅ **Interactive Tkinter GUI**  
+
+---
 
 ## 📌 Requirements
-Ensure you have Python installed, then install the required packages:
+Make sure you have **Python 3.7+** installed. Then, install the required packages using:
 
 ```sh
-pip install opencv-python numpy pillow
+pip install opencv-python numpy pillow sqlite3
+```
+
+## 📂 Installation & Usage
+###1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/Xyaxx/py-face-recognition.git
+cd py-face-recognition
+```
+
+###2️⃣ Run the Program
+
+```sh
+pip python face_recognition_gui.py
+```
