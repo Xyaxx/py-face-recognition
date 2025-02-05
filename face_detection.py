@@ -32,11 +32,11 @@ canvas.pack()
 
 # Listbox to display saved faces
 listbox = tk.Listbox(root, height=5)
-listbox.pack()
+listbox.pack(padx=10, pady=10)
 
 # Entry for user name input
 name_entry = tk.Entry(root)
-name_entry.pack()
+name_entry.pack(padx=10, pady=10)
 
 def save_face():
     """Save the detected face in the database."""
@@ -109,8 +109,8 @@ def recognize_face():
         
         # Compute similarity
         diff = np.abs(face_resized.astype("float") - stored_face.astype("float")).sum()
-        
-        if diff < 50000:  # Adjust threshold if needed
+        print(diff)
+        if diff < 150000:  # Adjust threshold if needed
             print(f"Recognized: {name}")
             return
 
@@ -158,19 +158,20 @@ def update_frame():
 
 # Buttons
 btn_start = tk.Button(root, text="Start Detection", command=lambda: threading.Thread(target=start_detection).start())
-btn_start.pack()
+btn_start.pack(padx=10, pady=10)
 
 btn_stop = tk.Button(root, text="Stop Detection", command=stop_detection)
-btn_stop.pack()
+btn_stop.pack(padx=10, pady=10)
 
 btn_save = tk.Button(root, text="Save Face", command=save_face)
-btn_save.pack()
+btn_save.pack(padx=10, pady=10)
 
 btn_recognize = tk.Button(root, text="Recognize Face", command=recognize_face)
-btn_recognize.pack()
+btn_recognize.packpadx=10, pady=10()
 
 # Load existing faces from DB
 load_faces()
 
 # Run the GUI
 root.mainloop()
+ 
