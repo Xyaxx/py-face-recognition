@@ -1,15 +1,14 @@
-# Face Recognition with dlib
+# Face Detection with OpenCV
 
-A simple Python program that detects and recognizes faces using **dlib** and the **HOG-based face detector**.
+A simple Python program that detects faces using **OpenCV's Haar cascades** in a GUI.
 
 ## 🚀 Features
-- Face detection using dlib’s **HOG + SVM** model
-- Facial landmark detection
-- Face encoding and comparison
-- Works with images and live webcam feed
+- Face detection using OpenCV’s **pre-trained Haar cascades**
+- Works with live webcam feed
+- Simple GUI with start & stop buttons
 
 ## 📌 Requirements
-Make sure you have Python installed, then install the dependencies:
+Ensure you have Python installed, then install the required packages:
 
 ```sh
-pip install dlib opencv-python numpy
+pip install opencv-python numpy pillow
