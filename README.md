@@ -19,14 +19,14 @@ pip install opencv-python numpy pillow sqlite3
 ```
 
 ## 📂 Installation & Usage
-###1️⃣ Clone the Repository
+**1️⃣ Clone the Repository**
 
 ```sh
 git clone https://github.com/Xyaxx/py-face-recognition.git
 cd py-face-recognition
 ```
 
-###2️⃣ Run the Program
+**2️⃣ Run the Program**
 
 ```sh
 pip python face_recognition_gui.py
