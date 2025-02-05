@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import sqlite3
 import threading
+import ctypes
 import tkinter as tk
 from PIL import Image, ImageTk
 
@@ -23,8 +24,19 @@ conn.commit()
 
 # GUI setup
 root = tk.Tk()
-root.title("Face Recognition with OpenCV & SQLite")
-root.geometry("800x600")
+root.title("Face Recognition with OpenCV & SQLite © 2025")
+root.geometry("1000x700")
+
+
+# Load the icon image using PIL
+icon = Image.open("app.ico")
+icon = ImageTk.PhotoImage(icon)
+ 
+# Set the taskbar icon
+root.iconphoto(True, icon)
+	
+myappid = u'py-face-detection.v1.0.5'
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 # Canvas to display video feed
 canvas = tk.Canvas(root, width=640, height=400)
@@ -32,11 +44,11 @@ canvas.pack()
 
 # Listbox to display saved faces
 listbox = tk.Listbox(root, height=5)
-listbox.pack(padx=10, pady=10)
+listbox.pack(padx=5, pady=5)
 
 # Entry for user name input
 name_entry = tk.Entry(root)
-name_entry.pack(padx=10, pady=10)
+name_entry.pack(padx=5, pady=5)
 
 def save_face():
     """Save the detected face in the database."""
@@ -158,16 +170,16 @@ def update_frame():
 
 # Buttons
 btn_start = tk.Button(root, text="Start Detection", command=lambda: threading.Thread(target=start_detection).start())
-btn_start.pack(padx=10, pady=10)
+btn_start.pack(padx=5, pady=5)
 
 btn_stop = tk.Button(root, text="Stop Detection", command=stop_detection)
-btn_stop.pack(padx=10, pady=10)
+btn_stop.pack(padx=5, pady=5)
 
 btn_save = tk.Button(root, text="Save Face", command=save_face)
-btn_save.pack(padx=10, pady=10)
+btn_save.pack(padx=5, pady=5)
 
 btn_recognize = tk.Button(root, text="Recognize Face", command=recognize_face)
-btn_recognize.packpadx=10, pady=10()
+btn_recognize.pack(padx=5, pady=5)
 
 # Load existing faces from DB
 load_faces()
